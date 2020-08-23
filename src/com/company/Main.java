@@ -1,9 +1,17 @@
 package com.company;
 
-public class Main {
+import org.junit.jupiter.api.Test;
 
-    public static void main(String[] args) {
-        System.out.println("Hallo");
-        System.out.println("Hei, Amina!");
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+public class MineFieldTest {
+
+    @Test
+    void itShowsEmptyMinefield()    {
+        assertArrayEquals(new String [] ( "000", "000" ), displayMinefield(new String[] ( "...", "..." )));
+    }
+
+    private String[] displayMinefield(String[] input) {
+        return new String[0];
     }
 }
